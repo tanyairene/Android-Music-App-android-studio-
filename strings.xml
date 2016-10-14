@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Music Player</string>
+
+    <string name="btn_import">Import Songs</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="no_songs">No Songs Available !!</string>
+</resources>

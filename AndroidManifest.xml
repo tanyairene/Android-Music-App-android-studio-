@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tanyairenesheppard.afinally">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".activities.ActivityDisplaySongs">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.ActivityCurrentSong" />
+
+        <service android:name=".services.MusicService">
+            <intent-filter>
+                <action android:name="com.acadgild.musicapp.STOP" />
+                <action android:name="com.acadgild.musicapp.NEXT" />
+                <action android:name="com.acadgild.musicapp.PREVIOUS" />
+                <action android:name="com.acadgild.musicapp.PAUSE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
